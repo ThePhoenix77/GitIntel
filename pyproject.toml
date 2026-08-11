@@ -1,0 +1,87 @@
+[project]
+name = "gitintel"
+version = "0.1.0"
+description = "Git repository intelligence and analytics tool"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    {name="Taha Boussaden"}
+]
+keywords = [
+    "git",
+    "git history",
+    "analytics",
+    "ownership",
+    "hotspots",
+    "cli",
+    "repository"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Environment :: Console",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Software Development :: Libraries"
+]
+
+dependencies = [
+    "pygit2>=1.16",
+    "typer>=0.15",
+    "rich>=13.9",
+    "pydantic>=2.10"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "pytest>=8.3",
+    "pytest-cov>=6.0",
+    "ruff>=0.9",
+    "twine>=6.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/ThePhoenix77/GitIntel"
+Repository = "https://github.com/ThePhoenix77/GitIntel"
+Documentation = "https://github.com/ThePhoenix77/GitIntel#readme"
+
+[project.scripts]
+gitintel = "gitintel.cli:app"
+gitit = "gitintel.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["gitintel"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint.isort]
+known-first-party = ["gitintel"]
+
+[tool.ruff.lint]
+select = ["F", "I"]

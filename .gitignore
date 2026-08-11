@@ -1,0 +1,103 @@
+# ==========================
+# Python
+# ==========================
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+
+# Type checking / linting caches
+.mypy_cache/
+.ruff_cache/
+
+
+# ==========================
+# Virtual Environments
+# ==========================
+
+.venv/
+.venv-1/
+.venv-3.11/
+.venv311/
+.venv3.11/
+venv/
+env/
+ENV/
+
+
+# ==========================
+# Environment Variables
+# ==========================
+
+.env
+.env.*
+!.env.example
+
+
+# ==========================
+# IDE / Editors
+# ==========================
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Vim
+*.swp
+*.swo
+
+
+# ==========================
+# Operating System
+# ==========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+
+# ==========================
+# GitIntel Generated Files
+# ==========================
+
+# Local GitIntel data/cache
+.gitintel/
+
+# Generated reports
+gitintel-report.md
+*.report.md
+*.report.json
+
+
+# ==========================
+# Testing / Temporary Files
+# ==========================
+
+tmp/
+temp/
+*.tmp
+
+
+# ==========================
+# Documentation tools
+# ==========================
+
+docs/_build/
