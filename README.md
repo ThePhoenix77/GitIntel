@@ -1,4 +1,7 @@
-# GitIntel
+
+<h1 align="center">
+<img width="300" alt="gitintel" src="https://github.com/user-attachments/assets/5327bb01-3abd-4afc-a2f4-b610f07de11f" />
+</h1><br>
 
 [![CI](https://img.shields.io/github/actions/workflow/status/ThePhoenix77/GitIntel/ci.yml?branch=main&logo=github&label=CI)](https://github.com/ThePhoenix77/GitIntel/actions?query=branch%3Amain+workflow%3ACI)
 [![PyPI](https://img.shields.io/pypi/v/gitintel.svg)](https://pypi.org/project/gitintel)
