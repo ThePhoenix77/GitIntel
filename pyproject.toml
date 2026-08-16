@@ -50,7 +50,7 @@ dev = [
 [project.urls]
 Homepage = "https://github.com/ThePhoenix77/GitIntel"
 Repository = "https://github.com/ThePhoenix77/GitIntel"
-Documentation = "https://github.com/ThePhoenix77/GitIntel#readme"
+Documentation = "https://thephoenix77.github.io/GitIntel/"
 
 [project.scripts]
 gitintel = "gitintel.cli:app"

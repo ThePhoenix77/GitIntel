@@ -101,3 +101,5 @@ temp/
 # ==========================
 
 docs/_build/
+# MkDocs build output
+site/

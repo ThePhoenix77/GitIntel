@@ -51,7 +51,8 @@ Before submitting a pull request, ensure:
 
 ## Documentation
 
-- Update `README.md`, `docs/DOCUMENTATION.md`, or other documentation when adding or modifying functionality.
+- Update `README.md` and the documentation site under `docs/` when adding or modifying functionality.
+- Preview the site locally with `python -m pip install -r docs/requirements.txt && mkdocs serve`, and validate it with `mkdocs build --strict` before opening a pull request.
 - Keep examples clear and concise.
 
 ## Pull Request Guidelines
