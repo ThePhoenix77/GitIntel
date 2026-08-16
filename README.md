@@ -7,6 +7,9 @@
 [![PyPI](https://img.shields.io/pypi/v/gitintel.svg)](https://pypi.org/project/gitintel)
 [![Python Version](https://img.shields.io/pypi/pyversions/gitintel.svg)](https://pypi.org/project/gitintel)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-thephoenix77.github.io%2FGitIntel-blue)](https://thephoenix77.github.io/GitIntel/)
+
+**Documentation: <https://thephoenix77.github.io/GitIntel/>**
 
 GitIntel is a command-line repository intelligence tool that helps developers understand repository history, ownership, and risk hotspots.
 

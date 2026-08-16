@@ -1,0 +1,150 @@
+site_name: GitIntel
+site_description: Git repository intelligence and analytics for commit history, ownership, and risk hotspots.
+site_url: https://thephoenix77.github.io/GitIntel/
+site_author: Taha Boussaden
+repo_name: ThePhoenix77/GitIntel
+repo_url: https://github.com/ThePhoenix77/GitIntel
+edit_uri: edit/main/docs/
+copyright: Released under the MIT License.
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ThePhoenix77/GitIntel
+      name: GitIntel on GitHub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/gitintel/
+      name: GitIntel on PyPI
+
+nav:
+  - Home:
+      - Introduction: index.md
+      - Why GitIntel: introduction/why-gitintel.md
+      - Use cases: introduction/use-cases.md
+  - Getting started:
+      - Overview: getting-started/index.md
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+      - Your first analysis: getting-started/first-analysis.md
+  - Core concepts:
+      - Overview: concepts/index.md
+      - Terminology: concepts/terminology.md
+      - Analysis pipeline: concepts/analysis-pipeline.md
+      - Metrics and scoring: concepts/metrics.md
+      - Repository sources and cache: concepts/repository-sources.md
+  - User guide:
+      - Overview: guide/index.md
+      - Analyzing repositories: guide/analyzing-repositories.md
+      - Ownership analysis: guide/ownership-analysis.md
+      - Hotspot analysis: guide/hotspot-analysis.md
+      - Output formats: guide/output-formats.md
+      - Automation and CI: guide/automation.md
+      - Best practices: guide/best-practices.md
+  - Reference:
+      - CLI: reference/cli.md
+      - JSON output schema: reference/json-schema.md
+      - Python API: reference/python-api.md
+      - Exit codes and errors: reference/errors.md
+  - Architecture:
+      - Overview: architecture/index.md
+      - Components: architecture/components.md
+      - Data flow: architecture/data-flow.md
+      - Design decisions: architecture/design-decisions.md
+  - Developer guide:
+      - Overview: development/index.md
+      - Development setup: development/setup.md
+      - Project structure: development/project-structure.md
+      - Coding conventions: development/coding-conventions.md
+      - Testing: development/testing.md
+      - Debugging: development/debugging.md
+      - Adding a command: development/adding-a-command.md
+      - Working on the docs: development/documentation.md
+      - Releasing: development/releasing.md
+  - Troubleshooting:
+      - Common issues: troubleshooting/index.md
+      - FAQ: troubleshooting/faq.md
+  - Project:
+      - Contributing: contributing.md
+      - Changelog: changelog.md
+      - Versioning and releases: releases.md
+      - Documentation roadmap: roadmap.md

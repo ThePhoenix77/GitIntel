@@ -1,0 +1,2 @@
+# Documentation toolchain (not part of the package's dev extra).
+mkdocs-material>=9.5,<10
