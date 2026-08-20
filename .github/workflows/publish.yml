@@ -36,7 +36,7 @@ jobs:
 
       - name: Publish to GitHub Packages
         run: |
-          python -m twine upload \
+          python -m twine upload --verbose \
             --repository-url https://pypi.pkg.github.com/${{ github.repository_owner }} \
             dist/*
         env:
