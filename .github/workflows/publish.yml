@@ -27,10 +27,12 @@ jobs:
           python -m pip install build twine
 
       - name: Build package
-        run: python -m build
+        run: |
+          python -m build
+          ls -lah dist/
 
       - name: Check package
-        run: python -m twine check dist/
+        run: python -m twine check dist/*
 
       - name: Publish to GitHub Packages
         run: |
