@@ -51,6 +51,8 @@ dev = [
 Homepage = "https://github.com/ThePhoenix77/GitIntel"
 Repository = "https://github.com/ThePhoenix77/GitIntel"
 Documentation = "https://thephoenix77.github.io/GitIntel"
+Issues = "https://github.com/ThePhoenix77/GitIntel/issues"
+Changelog = "https://github.com/ThePhoenix77/GitIntel/releases"
 
 [project.scripts]
 gitintel = "gitintel.cli:app"
