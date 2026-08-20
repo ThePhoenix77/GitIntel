@@ -41,4 +41,4 @@ jobs:
             dist/*
         env:
           TWINE_USERNAME: ${{ github.actor }}
-          TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          TWINE_PASSWORD: ${{ secrets.GH_PACKAGES_TOKEN }}
