@@ -18,23 +18,20 @@ from gitintel.models import (
     RepositorySummary,
 )
 
-VERBOSE = False
 QUIET = False
 
 
 def configure_console(
-    verbose: bool = False,
     quiet: bool = False,
 ):
     """
     Configure global console verbosity for the CLI.
+
+    Args:
+        quiet: If True, suppress progress output and decorations.
     """
-    global VERBOSE, QUIET
+    global QUIET
 
-    if verbose and quiet:
-        raise ValueError("Cannot use both --verbose and --quiet")
-
-    VERBOSE = verbose
     QUIET = quiet
 
 
@@ -184,12 +181,7 @@ def run_with_progress(
     """
 
     if QUIET:
-        if VERBOSE:
-            console.log(f"[blue]Running:[/blue] {description}")
         return function(*args, **kwargs)
-
-    if VERBOSE:
-        console.log(f"[blue]Running:[/blue] {description}")
 
     with Progress(
         SpinnerColumn(),
@@ -1106,56 +1098,6 @@ def print_hotspots_table(
     hotspots: list[Hotspot],
     context: RepositoryContext,
 ):
-
-    table = Table(
-        title="Repository Hotspots"
-    )
-
-
-    table.add_column(
-        "File"
-    )
-
-    table.add_column(
-        "Risk"
-    )
-
-    table.add_column(
-        "Changes"
-    )
-
-    table.add_column(
-        "Contributors"
-    )
-
-    table.add_column(
-        "Owner"
-    )
-
-
-    for hotspot in hotspots[:10]:
-
-        level = (
-            "[red]HIGH[/red]"
-            if hotspot.risk_score >= 70
-            else "[yellow]MED[/yellow]"
-        )
-
-
-        table.add_row(
-            hotspot.file_path,
-            f"{level} {hotspot.risk_score:.0f}",
-            str(
-                hotspot.lines_changed
-            ),
-            str(
-                hotspot.contributors
-            ),
-            hotspot.owner or "-",
-        )
-
-
-    console.print(table)
 
     table = Table(
         title="Repository Hotspots"

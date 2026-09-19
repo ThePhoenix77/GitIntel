@@ -1,6 +1,6 @@
 [project]
 name = "gitintel"
-version = "0.1.0"
+version = "0.1.1"
 description = "Git repository intelligence and analytics tool"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -34,8 +34,7 @@ classifiers = [
 dependencies = [
     "pygit2>=1.16",
     "typer>=0.15",
-    "rich>=13.9",
-    "pydantic>=2.10"
+    "rich>=13.9"
 ]
 
 [project.optional-dependencies]

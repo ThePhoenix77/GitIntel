@@ -73,25 +73,13 @@ def main(
         callback=_show_version,
         expose_value=False,
     ),
-    quiet: bool = typer.Option(
-        False,
-        "--quiet",
-        "-q",
-        help="Suppress progress output.",
-    ),
 ):
     """
-    Configure global CLI output verbosity.
-    """
-    # if verbose and quiet:
-    #     raise typer.BadParameter(
-    #         "Cannot use both --verbose and --quiet."
-    #     )
+    GitIntel - Git repository intelligence & analytics tool.
 
-    configure_console(
-        # verbose=verbose,
-        quiet=quiet,
-    )
+    Analyze repositories, understand contribution patterns,
+    and discover ownership insights.
+    """
 
 def handle_error(error: Exception):
     console.print(
@@ -126,10 +114,18 @@ def analyze(
         case_sensitive=False,
         help="Output format: table, json, or markdown",
     ),
+    quiet: bool = typer.Option(
+        False,
+        "--quiet",
+        "-q",
+        help="Suppress progress output.",
+    ),
 ):
     """
     Analyze a Git repository.
     """
+
+    configure_console(quiet=quiet)
 
     analysis = None
     context = None
@@ -201,10 +197,18 @@ def ownership(
         case_sensitive=False,
         help="Output format: table, json, or markdown",
     ),
+    quiet: bool = typer.Option(
+        False,
+        "--quiet",
+        "-q",
+        help="Suppress progress output.",
+    ),
 ):
     """
     Analyze file ownership.
     """
+
+    configure_console(quiet=quiet)
 
     analysis = None
 
@@ -281,10 +285,19 @@ def hotspots(
         case_sensitive=False,
         help="Output format: table, json, or markdown",
     ),
+    quiet: bool = typer.Option(
+        False,
+        "--quiet",
+        "-q",
+        help="Suppress progress output.",
+    ),
 ):
     """
     Analyze repository hotspots.
     """
+
+    configure_console(quiet=quiet)
+
     context = None
 
     try:

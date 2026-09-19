@@ -66,8 +66,8 @@ and Markdown renderers:
 | Markdown | `print_analysis_markdown()`, `print_ownership_markdown()`, `print_hotspots_markdown()` |
 | Support | `run_with_progress()`, `configure_console()`, `get_display_name()`, `get_file_activity()`, `get_repository_health_data()`, `print_banner()` |
 
-`markdown.py` and `reports/__init__.py` are currently empty placeholders; the Markdown
-renderers live in `terminal.py`.
+`markdown.py` and `reports/__init__.py` are currently empty; the Markdown
+renderers live in `terminal.py` alongside the table and JSON renderers.
 
 Verbosity is module-level state (`VERBOSE`, `QUIET`) set once by `configure_console()` from the
 global CLI callback.

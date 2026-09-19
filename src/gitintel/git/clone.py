@@ -149,8 +149,14 @@ def clone_repository(
                 except Exception:
                     pass
 
+            # Include error type and message for better debugging
+            # but avoid potentially sensitive information in error messages
+            error_message = str(error)
+            if len(error_message) > 200:
+                error_message = error_message[:200] + "..."
+
             raise ValueError(
-                f"Unable to clone repository: {url}"
+                f"Unable to clone repository: {url} ({type(error).__name__}: {error_message})"
             ) from error
 
 
